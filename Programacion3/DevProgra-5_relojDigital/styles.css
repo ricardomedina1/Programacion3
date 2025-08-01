@@ -1,0 +1,107 @@
+/* Fondo general con imagen */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: url('img/fondo_instituto.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 130vh;
+}
+
+/* Header */
+header {
+    background: #14532d; /* verde oscuro */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+    position: relative;
+    gap: 20px;
+}
+
+header::before {
+    content: "";
+    display: block;
+    background: url('img/LMH_LOGO.png') no-repeat left center;
+    background-size: contain;
+    width: 70px;
+    height: 70px;
+    flex-shrink: 0;
+    margin-right: 30px;
+}
+
+header h1, header p {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+
+header p {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+/* Centrar el contenedor del reloj */
+.contenedor {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo del reloj */
+#reloj {
+    background: rgba(0, 0, 0, 0.80);
+    color: #fff;
+    font-size: 1.2em;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background: #fff;
+    color: #b0b0b0;
+    text-align: center;
+    padding: 25px 10px 15px 10px;
+    font-size: 1em;
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.05);
+}
+
+footer a {
+    color: #14532d;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+footer a:hover {
+    color: #1e7c4a;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    #reloj {
+        font-size: 2em;
+        padding: 20px 10px;
+        min-width: 180px;
+    }
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 10px;
+    }
+    header::before {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    header h1, header p {
+        width: 100%;
+        text-align: left;
+    }
+}
